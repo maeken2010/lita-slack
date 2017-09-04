@@ -74,7 +74,7 @@ module Lita
             "reactions.add",
             name: reaction_name,
             channel: message_event["channel"],
-            timestamp: message_event["timestamp"]
+            timestamp: message_event["ts"]
           )
         end
 
