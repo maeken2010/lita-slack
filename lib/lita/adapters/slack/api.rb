@@ -69,6 +69,15 @@ module Lita
           call_api("channels.setTopic", channel: channel, topic: topic)
         end
 
+        def add_reaction(reaction_name, message_event)
+          call_api(
+            "reactions.add",
+            name: reaction_name,
+            channel: message_event["channel"],
+            timestamp: message_event["timestamp"]
+          )
+        end
+
         def rtm_start
           response_data = call_api("rtm.start")
 

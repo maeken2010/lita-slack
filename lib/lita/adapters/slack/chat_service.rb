@@ -22,6 +22,10 @@ module Lita
         def send_attachments(target, attachments)
           api.send_attachments(target, Array(attachments))
         end
+
+        def add_reaction(reaction_name, message_event)
+          api.add_reaction(reaction_name, message_event)
+        end
         alias_method :send_attachment, :send_attachments
       end
     end
